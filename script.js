@@ -8,8 +8,6 @@ const programing_lenguagues = [
     'JAVASCRIPT',
     'PYTHON',
     'JAVA',
-    'C#',
-    'C++',
     'PHP',
     'RUBY',
     'SWIFT',
@@ -44,7 +42,7 @@ const programing_lenguagues = [
 
 let answer = '';
 let maxWrong = 6;
-let mistakes = 0;
+let mistake = 0;
 let guessed = [];
 let wordStatus = null;
 
@@ -65,3 +63,46 @@ function generateButtons() {
         `).join('');
     keyboardBox.innerHTML = buttonsWord;
 }
+
+let Guess = (choosenLetter) => {
+    guessed.indexOf(choosenLetter) === -1 ? guessed.push(choosenLetter) : null;
+    document.getElementById(choosenLetter).setAttribute('disabled', true);
+    document.getElementById(choosenLetter).style.backgroundColor = '#F5F5F5';
+    document.getElementById(choosenLetter).style.border = '1px solid grey';
+    document.getElementById(choosenLetter).style.color = 'grey';
+
+    if(answer.indexOf(choosenLetter) >= 0) {
+        wordGuess();
+        GameWon();
+    }else if (answer.indexOf(choosenLetter) === -1) {
+        mistake++;
+        mistakeUpdate();
+        GameLost();
+        hangmanUpdate();
+    }
+
+}
+
+let GameWon = () => {
+    if(wordStatus === answer) {
+        resultBox.style.display = 'block';
+        message.innerHTML = 'Congratulations! You Won!';
+        message.style.color = 'green';
+        result_box_answer.innerHTML = 'The answer is: ' + answer;
+    }
+}
+
+let GameLost = () => {
+    if(mistake === maxWrong) {
+        resultBox.style.display = 'block';
+        message.innerHTML = 'You Lost!';
+        message.style.color = 'red';
+        result_box_answer.innerHTML = 'The answer is: ' + answer;
+    }
+}
+
+let wordGuess = () => {
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+    document.querySelector('.wordSpotLight').innerHTML = wordStatus;
+}
+
