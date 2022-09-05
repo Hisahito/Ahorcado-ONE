@@ -11,6 +11,13 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.logo{
+    height: 3rem;
+    position: relative;
+    top: 70px;
+    left: 80px;
+}
+
 .container{
     padding: 15px 10px 20px 10px;
     width: 325px;
@@ -236,4 +243,22 @@ body{
 .wrong-guesses{
     font-size: 12px;
     margin-left: 10px;
+}
+
+footer {
+    position: relative;
+    font-weight: 200;
+    justify-content: center;
+    padding: 0.1rem;
+    background: #E5E5E5;
+    border-top: 1px solid #0A3871;
+    top: 690px;
+    }
+
+footer > p {
+    margin: 0.3rem;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    display: initial;
+    padding-left: 20%;
 }
