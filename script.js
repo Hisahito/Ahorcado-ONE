@@ -1,12 +1,10 @@
-import JSConfetti from 'js-confetti'
-
-const jsConfetti = new JSConfetti()
 
 let keyboardBox = document.querySelector('.keyboard-box');
 let resultBox = document.querySelector('.result-box');
 let message = document.querySelector('.message');
 let result_box_answer = document.querySelector('.result-answer');
 let max_wrong = document.querySelector('.max-wrong');
+
 
 const programing_lenguagues = [
     'JAVASCRIPT',
@@ -94,6 +92,7 @@ let GameWon = () => {
         message.innerHTML = 'Congratulations! You Won!';
         message.style.color = 'green';
         result_box_answer.innerHTML = answer;
+        const jsConfetti = new JSConfetti();
         jsConfetti.addConfetti({
             confettiColors: [
               '#0A3871', '#fff', '#0A3871', '#fff', '#0A3871', '#fff',
