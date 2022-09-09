@@ -14,8 +14,8 @@ body{
 .logo{
     height: 3rem;
     position: relative;
-    top: 70px;
-    left: 80px;
+    top: 50px;
+    left: 70px;
 }
 
 .container{
@@ -273,4 +273,18 @@ footer > p {
     font-family: 'Poppins', sans-serif;
     display: initial;
     padding-left: 20%;
+}
+
+@media only screen and (max-width: 821px) {
+    footer {
+      width: 100%;
+      position: relative;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    footer {
+      width: 100%;
+      top: 790px
+    }
 }
