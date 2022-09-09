@@ -29,7 +29,7 @@ const programing_lenguagues = [
     'ASSEMBLER',
     'BASIC',
     'C',
-    'SOLIDIY',
+    'SOLIDITY',
     'PROLOG',
     'APL',
     'FORTH',
