@@ -7,7 +7,7 @@
 }
 
 body{
-    background: orange;
+    background: #f1f1f1;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -210,7 +210,7 @@ body{
     all: unset;
     padding: 10px;
     width: 100px;
-    background: orange;
+    background: #fff;
     color: black;
     border-radius: 5px;
     position: absolute;
@@ -221,14 +221,20 @@ body{
     border: 2px solid black;
 }
 
+.game-btn:hover,
+.game-btn:focus{
+    background: #0A3871;
+    color: #fff;
+}
+
 .result-answer{
     font-weight: 600;
 }
 
 .reset-btn{
     all: unset;
-    background: orange;
-    color: black;
+    background: #0A3871;
+    color: white;
     border: 2px solid black;
     text-align: center;
     padding: 1px;
@@ -238,6 +244,12 @@ body{
     cursor: pointer;
     border-radius: 3px;
     margin-right: 3px;
+}
+
+.reset-btn:hover,
+.reset-btn:focus{
+    background: #fff;
+    color: black;
 }
 
 .wrong-guesses{
